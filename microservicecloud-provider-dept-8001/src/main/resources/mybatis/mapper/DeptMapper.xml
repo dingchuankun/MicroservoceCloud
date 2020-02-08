@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<mapper namespace="com.dck.springcloud.dao.DeptDao">
+	<select id="findById" resultType="Dept" parameterType="long">
+		select deptno,dname,db_source from dept where deptno = #{deptno};
+	</select>
+	<select id="findAll" parameterType="long">
+		select * from dept;
+	</select>
+	<insert id="addDept" resultType="Dept">
+		insert into dept(dname,db_source) values( #{deptno},DATABASE());
+	</insert>
+</mapper>
