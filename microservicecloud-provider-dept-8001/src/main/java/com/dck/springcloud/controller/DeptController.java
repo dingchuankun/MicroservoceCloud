@@ -28,7 +28,7 @@ public class DeptController {
 	}
 	@RequestMapping(value = "/dept/list", method = RequestMethod.GET)
 	public List<Dept> list() {
-		System.out.println("list方法執行..............");
+		System.out.println("controller-list方法執行..............");
 		return deptservice.list();
 	}
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
