@@ -33,4 +33,10 @@ public class DeptServiceImpl implements DeptService
 		return dao.findAll();
 	}
 
+	@Override
+	public boolean del(Long id) {
+		// TODO Auto-generated method stub
+		return dao.del(id);
+	}
+
 }

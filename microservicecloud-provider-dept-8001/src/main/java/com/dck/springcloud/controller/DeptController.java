@@ -21,7 +21,7 @@ public class DeptController {
 
 		return deptservice.add(dept);
 	}
-	@RequestMapping(value = "/dept/get", method = RequestMethod.GET)
+	@RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
 	public Dept get(@PathVariable("id") long id) {
 
 		return deptservice.get(id);
@@ -30,6 +30,11 @@ public class DeptController {
 	public List<Dept> list() {
 		System.out.println("controller-list·½·¨ˆÌÐÐ..............");
 		return deptservice.list();
+	}
+	@RequestMapping(value = "/dept/del/{id}", method = RequestMethod.GET)
+	public boolean del(@PathVariable("id") long id) {
+		
+		return deptservice.del(id);
 	}
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	public String test() {

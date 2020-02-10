@@ -14,4 +14,6 @@ public interface DeptDao
 	public Dept findById(Long id);
 
 	public List<Dept> findAll();
+
+	public boolean del(Long id);
 }
